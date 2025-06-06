@@ -1,0 +1,420 @@
+/* Global */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+  background-color: #06ead3;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center; /* Center the menu horizontally */
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  position: relative;
+  margin-left: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Dropdown */
+nav ul ul {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  margin-top: 5px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+nav li:hover > ul {
+  display: block;
+}
+
+nav ul ul li {
+  width: 160px;
+}
+
+/* Main Content */
+.main-content,
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.main-content img,
+.about img {
+  width: 200px; /* Sesuaikan dengan ukuran yang kamu inginkan */
+  height: 200px; /* Sesuaikan dengan ukuran yang kamu inginkan */
+  border-radius: 50%;
+  object-fit: cover; /* Agar gambar tetap terpotong proporsional */
+}
+
+.main-content div,
+.about div {
+  max-width: 500px;
+}
+
+/* Portofolio */
+section h2 {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+table {
+  width: 90%;
+  margin: 0 auto 50px;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #eee;
+}
+
+/*  Opini Berita */
+.opini-berita {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.opini-berita h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+.card-content a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.card-content a:hover {
+  text-decoration: underline;
+}
+
+/* Kontak Form */
+.kontak {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.kontak h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.kontak-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.form-kontak {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-kontak label {
+  font-weight: bold;
+}
+
+.form-kontak input,
+.form-kontak textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-kontak button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-kontak button:hover {
+  background-color: #0056b3;
+}
+
+.maps {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.main-content {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.main-content div h2,
+.main-content div p,
+.about div h2,
+.about div p {
+  border: 1px solid #007bff; /* Warna biru */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #fefefe;
+}
+/* Font aesthetic untuk judul */
+.main-content h2,
+.about h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  color: #333;
+  font-weight: 700;
+}
+.main-content div h2,
+.about div h2 {
+  display: inline-block;
+  border: 2px solid #007bff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #fefefe;
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  color: #333;
+  font-weight: 700;
+}
+.main-content div,
+.about div {
+  max-width: 500px;
+  text-align: center; /* Untuk memusatkan teks di dalam div */
+}
+
+.main-content img,
+.about img {
+  width: 250px; /* Sebelumnya 200px, ditingkatkan */
+  height: 250px; /* Disamakan agar bulat dan proporsional */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff; /* Tambahan garis biru agar serasi dengan teks */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Tambahan efek bayangan */
+}
+/* Ukuran teks responsif */
+.main-content div h2,
+.about div h2 {
+  font-size: clamp(24px, 5vw, 36px); /* Responsif antara 24px - 36px */
+}
+
+.main-content div p,
+.about div p {
+  font-size: clamp(16px, 2.5vw, 20px); /* Responsif antara 16px - 20px */
+}
+
+/* Gambar responsif */
+.main-content img,
+.about img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .main-content,
+  .about {
+    flex-direction: column;
+    padding: 40px 10px;
+    gap: 20px;
+  }
+
+  .main-content div,
+  .about div {
+    padding: 0 10px;
+  }
+}
+/* Animasi masuk (fade-in) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-content,
+.about,
+.card {
+  animation: fadeInUp 1s ease both;
+}
+
+/* Delay untuk card agar muncul bertahap */
+.card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Hover efek untuk gambar */
+.main-content img:hover,
+.about img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Hover efek untuk tombol */
+.form-kontak button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+/* Dropdown animation */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Animasi untuk link di dropdown */
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #e0e0e0;
+  transform: translateX(5px);
+}
